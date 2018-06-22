@@ -28,8 +28,6 @@ pups_data = janitor::clean_names(pups_data)
 
 ## Manipulate
 
-Adding random things!
-
 ```{r}
 select(litters_data, group:gd0_weight)
 ```
