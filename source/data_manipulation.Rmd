@@ -1,6 +1,6 @@
 ---
 title: "Data Manipulation"
-author: "Jeff Goldsmith"
+author: "Jeff Goldsmith and Cale Basaraba"
 date: "`r Sys.time()`"
 output:
   html_document:
@@ -28,7 +28,16 @@ pups_data = janitor::clean_names(pups_data)
 
 ## Manipulate
 
+Adding random things!
+
 ```{r}
 select(litters_data, group:gd0_weight)
 ```
 
+```{r new-chunk}
+
+ggplot(data = litters_data) +
+  geom_point(aes(x = gd0_weight, y = pups_survive, color = group)) +
+  theme_minimal()
+
+```
