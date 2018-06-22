@@ -1,0 +1,26 @@
+---
+title: "Data Manipulation"
+author: "Jeff Goldsmith"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Import data.
+
+```{r csv}
+library(tidyverse)
+
+litters_data = read_csv(here::here("data", "FAS_litters.csv"),
+  col_types = "ccddiiii")
+litters_data = janitor::clean_names(litters_data)
+
+pups_data = read_csv(here::here("data", "FAS_pups.csv"),
+  col_types = "ciiiii")
+pups_data = janitor::clean_names(pups_data)
+```
