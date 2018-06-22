@@ -24,3 +24,11 @@ pups_data = read_csv(here::here("data", "FAS_pups.csv"),
   col_types = "ciiiii")
 pups_data = janitor::clean_names(pups_data)
 ```
+
+
+## Manipulate
+
+```{r}
+select(litters_data, group:gd0_weight)
+```
+
